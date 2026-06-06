@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="David Mdikula - IoT Developer, Photographer, Designer, Novel Writer. DEV TEK INNOVATION Tanzania.">
+<meta name="keywords" content="David Mdikula, DEV TEK INNOVATION, IoT Tanzania, Developer Tanzania, Photography Tanzania, Graduation Sashes Tanzania">
+<title>David Mdikula | DEV TEK INNOVATION</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--cream:#faf7f2;--cream2:#f2ede4;--cream3:#e8e0d4;--ink:#1a1610;--ink2:#3d3629;--ink3:#7a6f61;--gold:#b8933a;--gold2:#d4aa50;--gold3:#f0cc7a;--teal:#1a5c52;--teal2:#2a8070;}
+body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;}
+
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 4rem;border-bottom:1px solid var(--cream3);}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;letter-spacing:0.05em;color:var(--ink);}
+.nav-logo span{color:var(--gold);}
+.nav-links{display:flex;gap:2rem;}
+.nav-links a{font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink3);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--gold);}
+
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:92vh;border-bottom:1px solid var(--cream3);}
+.hero-left{padding:5rem 4rem;display:flex;flex-direction:column;justify-content:flex-end;border-right:1px solid var(--cream3);}
+.hero-right{padding:5rem 4rem;display:flex;flex-direction:column;justify-content:space-between;background:var(--ink);}
+
+.eyebrow{font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:flex;align-items:center;gap:12px;}
+.eyebrow::before{content:'';width:24px;height:1px;background:var(--gold);}
+
+.hero-name{font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,7vw,6.5rem);line-height:0.95;font-weight:600;color:var(--ink);margin-bottom:2rem;}
+.hero-name em{font-style:italic;color:var(--gold);}
+
+.hero-desc{font-size:14px;color:var(--ink3);line-height:1.8;max-width:340px;border-left:2px solid var(--gold);padding-left:1.2rem;margin-bottom:3rem;}
+
+.hero-cta{display:inline-flex;align-items:center;gap:10px;padding:14px 32px;background:var(--ink);color:var(--cream);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:background 0.2s;width:fit-content;cursor:pointer;border:none;}
+.hero-cta:hover{background:var(--gold);}
+
+.company-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border:1px solid rgba(255,255,255,0.15);border-radius:2px;margin-bottom:3rem;}
+.company-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--gold2);}
+.company-badge-text{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.5);}
+.hero-right h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.5rem);line-height:1.1;color:#faf7f2;font-weight:600;margin-bottom:1.5rem;}
+.hero-right h2 em{font-style:italic;color:var(--gold2);}
+.hero-right p{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.8;}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:3rem;}
+.htag{padding:6px 14px;border:1px solid rgba(255,255,255,0.1);font-size:11px;color:rgba(255,255,255,0.4);border-radius:2px;letter-spacing:0.05em;}
+.htag.active{border-color:var(--gold2);color:var(--gold2);}
+
+.marquee-wrap{overflow:hidden;border-bottom:1px solid var(--cream3);padding:1rem 0;background:var(--ink);}
+.marquee-inner{display:flex;gap:0;white-space:nowrap;animation:scroll 18s linear infinite;}
+@keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.marquee-item{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:0 2.5rem;}
+.marquee-item.gold{color:var(--gold2);}
+
+.services-section{padding:6rem 4rem;}
+.section-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:4rem;border-bottom:1px solid var(--cream3);padding-bottom:2rem;}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;color:var(--ink);}
+.section-num{font-size:11px;letter-spacing:0.2em;color:var(--ink3);}
+.svc-list{display:flex;flex-direction:column;}
+.svc-row{display:grid;grid-template-columns:60px 1fr auto;align-items:center;gap:2rem;padding:1.75rem 0;border-bottom:1px solid var(--cream3);cursor:default;}
+.svc-row:hover .svc-row-num,.svc-row:hover .svc-row-title{color:var(--gold);}
+.svc-row-num{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--cream3);font-weight:600;}
+.svc-row-title{font-size:15px;font-weight:500;color:var(--ink);margin-bottom:4px;transition:color 0.2s;}
+.svc-row-desc{font-size:12px;color:var(--ink3);}
+.svc-row-icon{font-size:1.4rem;opacity:0.4;}
+
+.about-section{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--cream3);border-bottom:1px solid var(--cream3);}
+.about-left{padding:5rem 4rem;border-right:1px solid var(--cream3);}
+.about-right{padding:5rem 4rem;background:var(--cream2);}
+.about-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.5vw,2rem);font-style:italic;line-height:1.6;color:var(--ink);margin-bottom:2rem;}
+.about-quote em{color:var(--teal);}
+.about-body{font-size:13px;color:var(--ink3);line-height:1.9;}
+.skills-grid2{display:flex;flex-direction:column;gap:12px;}
+.skill-bar{display:flex;flex-direction:column;gap:6px;}
+.skill-bar-name{font-size:12px;font-weight:500;color:var(--ink2);}
+.skill-bar-track{height:3px;background:var(--cream3);border-radius:2px;overflow:hidden;}
+.skill-bar-fill{height:100%;background:var(--gold);border-radius:2px;}
+
+.social-section{padding:5rem 4rem;}
+.social-grid2{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--cream3);border:1px solid var(--cream3);border-radius:4px;overflow:hidden;}
+.soc-card{background:var(--cream);padding:2rem 1.5rem;text-decoration:none;display:flex;flex-direction:column;gap:10px;transition:background 0.2s;}
+.soc-card:hover{background:var(--cream2);}
+.soc-icon-wrap{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;}
+.soc-icon-wrap.wa{background:#e8f7ef;} .soc-icon-wrap.em{background:#fdecea;}
+.soc-icon-wrap.li{background:#e8f0f7;} .soc-icon-wrap.tw{background:#f0f0f0;}
+.soc-icon-wrap.ig{background:#fde8f2;} .soc-icon-wrap.wc{background:#e8f7ef;}
+.soc-name{font-size:13px;font-weight:500;color:var(--ink);}
+.soc-handle{font-size:11px;color:var(--ink3);}
+
+.novel-section{margin:0 4rem;padding:3.5rem;background:var(--ink);border-radius:4px;display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center;}
+.novel-num{font-family:'Cormorant Garamond',serif;font-size:5rem;color:rgba(255,255,255,0.06);font-weight:600;line-height:1;}
+.novel-content h3{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:#faf7f2;font-weight:600;margin-bottom:0.75rem;}
+.novel-content h3 em{font-style:italic;color:var(--gold2);}
+.novel-content p{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.8;}
+
+/* FOOTER */
+footer{padding:3rem 4rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;border-top:1px solid var(--cream3);margin-top:5rem;}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--ink);}
+.footer-brand span{color:var(--gold);}
+footer p{font-size:11px;color:var(--ink3);}
+.footer-cta{display:inline-flex;align-items:center;gap:8px;padding:10px 24px;border:1px solid var(--ink);color:var(--ink);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:all 0.2s;cursor:pointer;background:none;}
+.footer-cta:hover{background:var(--ink);color:var(--cream);}
+
+/* ── SOCIAL POPUP ── */
+.popup-overlay{display:none;position:fixed;inset:0;background:rgba(26,22,16,0.7);z-index:999;align-items:center;justify-content:center;}
+.popup-overlay.open{display:flex;}
+.popup-box{background:var(--cream);border-radius:8px;padding:2.5rem;width:90%;max-width:400px;position:relative;}
+.popup-close{position:absolute;top:1rem;right:1.2rem;font-size:1.3rem;cursor:pointer;color:var(--ink3);background:none;border:none;line-height:1;}
+.popup-close:hover{color:var(--ink);}
+.popup-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:var(--ink);margin-bottom:0.4rem;}
+.popup-sub{font-size:12px;color:var(--ink3);margin-bottom:2rem;}
+.popup-links{display:flex;flex-direction:column;gap:12px;}
+.popup-link{display:flex;align-items:center;gap:16px;padding:1rem 1.2rem;border:1px solid var(--cream3);border-radius:4px;text-decoration:none;transition:all 0.2s;background:var(--cream);}
+.popup-link:hover{border-color:var(--gold);background:var(--cream2);}
+.popup-link-icon{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;}
+.li-bg{background:#e8f0f7;}
+.tw-bg{background:#f0f0f0;}
+.ig-bg{background:#fde8f2;}
+.popup-link-info{}
+.popup-link-name{font-size:13px;font-weight:500;color:var(--ink);}
+.popup-link-handle{font-size:11px;color:var(--ink3);margin-top:2px;}
+.popup-link-arrow{margin-left:auto;font-size:14px;color:var(--ink3);}
+
+@media(max-width:700px){
+  nav{padding:1.2rem 1.5rem;} .nav-links{display:none;}
+  .hero{grid-template-columns:1fr;} .hero-right{display:none;} .hero-left{padding:3rem 1.5rem;}
+  .services-section,.social-section{padding:3rem 1.5rem;}
+  .section-header{flex-direction:column;align-items:flex-start;gap:0.5rem;}
+  .about-section{grid-template-columns:1fr;} .about-left,.about-right{padding:3rem 1.5rem;}
+  .social-grid2{grid-template-columns:1fr 1fr;}
+  .novel-section{margin:0 1.5rem;grid-template-columns:1fr;} .novel-num{display:none;}
+  footer{padding:2rem 1.5rem;}
+}
+</style>
+
+<nav>
+  <div class="nav-logo">DEV <span>TEK</span> INNOVATION</div>
+  <div class="nav-links">
+    <a href="#services">Huduma</a>
+    <a href="#about">Kuhusu</a>
+    <a href="#social">Mawasiliano</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="eyebrow">Tanzania · Available</div>
+    <h1 class="hero-name">David<br><em>Mdikula</em></h1>
+    <p class="hero-desc">Technician wa electronics, IoT developer, mbunifu, mpiga picha, na mwandishi wa novel. Ninabuni ulimwengu kwa teknolojia na sanaa.</p>
+    <button class="hero-cta" onclick="openPopup()">💬 Wasiliana Nami</button>
+  </div>
+  <div class="hero-right">
+    <div>
+      <div class="company-badge"><div class="company-badge-dot"></div><span class="company-badge-text">Dev Tek Innovation — Est. 2024</span></div>
+      <h2>Teknolojia<br>inakutana na<br><em>ubunifu</em></h2>
+      <p>Kampuni inayobuni suluhisho za IoT, software, design, na zaidi — kila kitu chini ya paa moja.</p>
+    </div>
+    <div class="hero-tags">
+      <span class="htag active">IoT Innovation</span>
+      <span class="htag active">Software Dev</span>
+      <span class="htag">Photography</span>
+      <span class="htag">Graduation Sashes</span>
+      <span class="htag">Video Ads</span>
+      <span class="htag">Electronics</span>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-wrap">
+  <div class="marquee-inner">
+    <span class="marquee-item gold">DEV TEK INNOVATION</span>
+    <span class="marquee-item">IoT Projects</span><span class="marquee-item gold">·</span>
+    <span class="marquee-item">Software Development</span><span class="marquee-item gold">·</span>
+    <span class="marquee-item">Graduation Sashes</span><span class="marquee-item gold">·</span>
+    <span class="marquee-item">Photography</span><span class="marquee-item gold">·</span>
+    <span class="marquee-item">Novel Writing</span><span class="marquee-item gold">·</span>
+    <span class="marquee-item">Video Ads</span><span class="marquee-item gold">·</span>
+    <span class="marquee-item">Electronics & Telecom</span><span class="marquee-item gold">·</span>
+    <span class="marquee-item gold">DEV TEK INNOVATION</span>
+    <span class="marquee-item">IoT Projects</span><span class="marquee-item gold">·</span>
+    <span class="marquee-item">Software Development</span><span class="marquee-item gold">·</span>
+    <span class="marquee-item">Graduation Sashes</span><span class="marquee-item gold">·</span>
+    <span class="marquee-item">Photography</span><span class="marquee-item gold">·</span>
+    <span class="marquee-item">Novel Writing</span><span class="marquee-item gold">·</span>
+    <span class="marquee-item">Video Ads</span><span class="marquee-item gold">·</span>
+    <span class="marquee-item">Electronics & Telecom</span><span class="marquee-item gold">·</span>
+  </div>
+</div>
+
+<section class="services-section" id="services">
+  <div class="section-header">
+    <h2 class="section-title">Huduma Zetu</h2>
+    <span class="section-num">08 Services</span>
+  </div>
+  <div class="svc-list">
+    <div class="svc-row"><span class="svc-row-num">01</span><div><div class="svc-row-title">IoT Projects & Innovation</div><div class="svc-row-desc">Smart systems, sensors, automation za kisasa</div></div><span class="svc-row-icon">🌐</span></div>
+    <div class="svc-row"><span class="svc-row-num">02</span><div><div class="svc-row-title">Software Development</div><div class="svc-row-desc">Apps, websites, na systems za aina zote</div></div><span class="svc-row-icon">💻</span></div>
+    <div class="svc-row"><span class="svc-row-num">03</span><div><div class="svc-row-title">Graduation Sashes</div><div class="svc-row-desc">Sash za ubora wa hali ya juu kwa sherehe za graduation</div></div><span class="svc-row-icon">🎓</span></div>
+    <div class="svc-row"><span class="svc-row-num">04</span><div><div class="svc-row-title">Photography</div><div class="svc-row-desc">Harusi, matukio, portraits za kitaalamu</div></div><span class="svc-row-icon">📷</span></div>
+    <div class="svc-row"><span class="svc-row-num">05</span><div><div class="svc-row-title">Design & Print</div><div class="svc-row-desc">Poster, business cards, mabango ya biashara</div></div><span class="svc-row-icon">🖨️</span></div>
+    <div class="svc-row"><span class="svc-row-num">06</span><div><div class="svc-row-title">Video Ads & Animations</div><div class="svc-row-desc">Video ads, wedding animations, matangazo</div></div><span class="svc-row-icon">🎬</span></div>
+    <div class="svc-row"><span class="svc-row-num">07</span><div><div class="svc-row-title">Electronics & Telecom</div><div class="svc-row-desc">Ukarabati na huduma za vifaa vya umeme</div></div><span class="svc-row-icon">📡</span></div>
+    <div class="svc-row"><span class="svc-row-num">08</span><div><div class="svc-row-title">Computer Services</div><div class="svc-row-desc">Matengenezo na usanidi wa kompyuta</div></div><span class="svc-row-icon">🖥️</span></div>
+  </div>
+</section>
+
+<section class="about-section" id="about">
+  <div class="about-left">
+    <p class="about-quote">Ninachanganya <em>sayansi ya teknolojia</em> na ubunifu wa sanaa — hii ndiyo DEV TEK INNOVATION.</p>
+    <p class="about-body">Mimi ni David Mdikula, technician wa electronics na telecommunications, IoT developer, mpiga picha, na mwandishi wa novel. Ninaishi Tanzania na ninafanya kazi duniani kote.</p>
+  </div>
+  <div class="about-right">
+    <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink3);margin-bottom:1.5rem;">Ujuzi Mkuu</div>
+    <div class="skills-grid2">
+      <div class="skill-bar"><div class="skill-bar-name">IoT & Embedded Systems</div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:88%"></div></div></div>
+      <div class="skill-bar"><div class="skill-bar-name">Software Development</div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:82%"></div></div></div>
+      <div class="skill-bar"><div class="skill-bar-name">Photography & Videography</div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:90%"></div></div></div>
+      <div class="skill-bar"><div class="skill-bar-name">Graphic Design</div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:85%"></div></div></div>
+      <div class="skill-bar"><div class="skill-bar-name">Electronics & Telecom</div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:92%"></div></div></div>
+      <div class="skill-bar"><div class="skill-bar-name">Novel Writing</div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:95%"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="novel-section" style="margin-top:5rem;">
+  <div class="novel-num">✍</div>
+  <div class="novel-content">
+    <h3>Mwandishi wa <em>Novel</em></h3>
+    <p>Zaidi ya teknolojia na design — ninaandika hadithi ndefu zinazoshika moyo. Watu wanaopenda kazi zangu wanasema nina uwezo wa kipekee wa kuandika ambao unakuvutia tangu ukurasa wa kwanza.</p>
+  </div>
+</section>
+
+<section class="social-section" id="social">
+  <div class="section-header">
+    <h2 class="section-title">Nifikia Hapa</h2>
+    <span class="section-num">06 Channels</span>
+  </div>
+  <div class="social-grid2">
+    <a class="soc-card" href="https://wa.me/255620617098">
+      <div class="soc-icon-wrap wa">💬</div><div class="soc-name">WhatsApp</div><div class="soc-handle">+255 620 617 098</div>
+    </a>
+    <a class="soc-card" href="mailto:davidmdikula@gmail.com">
+      <div class="soc-icon-wrap em">✉️</div><div class="soc-name">Email</div><div class="soc-handle">davidmdikula@gmail.com</div>
+    </a>
+    <a class="soc-card" href="https://www.linkedin.com/in/david-mdikula" target="_blank">
+      <div class="soc-icon-wrap li">💼</div><div class="soc-name">LinkedIn</div><div class="soc-handle">DAVID MDIKULA</div>
+    </a>
+    <a class="soc-card" href="https://twitter.com/david_mdikula" target="_blank">
+      <div class="soc-icon-wrap tw">🐦</div><div class="soc-name">Twitter / X</div><div class="soc-handle">@david_mdikula</div>
+    </a>
+    <a class="soc-card" href="https://www.instagram.com/david_mdikula" target="_blank">
+      <div class="soc-icon-wrap ig">📸</div><div class="soc-name">Instagram</div><div class="soc-handle">@david_mdikula</div>
+    </a>
+    <a class="soc-card" href="#">
+      <div class="soc-icon-wrap wc">💚</div><div class="soc-name">WeChat</div><div class="soc-handle">davidmdikula</div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">DEV <span>TEK</span> INNOVATION</div>
+  <p>© 2026 · David Mdikula · Tanzania · +255 620 617 098</p>
+  <button class="footer-cta" onclick="openPopup()">Wasiliana ↗</button>
+</footer>
+
+<!-- SOCIAL POPUP -->
+<div class="popup-overlay" id="popupOverlay" onclick="closeOnOverlay(event)">
+  <div class="popup-box">
+    <button class="popup-close" onclick="closePopup()">✕</button>
+    <div class="popup-title">Nifikia Hapa</div>
+    <div class="popup-sub">Chagua platform unayopendelea</div>
+    <div class="popup-links">
+      <a class="popup-link" href="https://www.instagram.com/david_mdikula" target="_blank">
+        <div class="popup-link-icon ig-bg">📸</div>
+        <div class="popup-link-info">
+          <div class="popup-link-name">Instagram</div>
+          <div class="popup-link-handle">@david_mdikula</div>
+        </div>
+        <span class="popup-link-arrow">→</span>
+      </a>
+      <a class="popup-link" href="https://www.linkedin.com/in/david-mdikula" target="_blank">
+        <div class="popup-link-icon li-bg">💼</div>
+        <div class="popup-link-info">
+          <div class="popup-link-name">LinkedIn</div>
+          <div class="popup-link-handle">DAVID MDIKULA</div>
+        </div>
+        <span class="popup-link-arrow">→</span>
+      </a>
+      <a class="popup-link" href="https://twitter.com/david_mdikula" target="_blank">
+        <div class="popup-link-icon tw-bg">🐦</div>
+        <div class="popup-link-info">
+          <div class="popup-link-name">Twitter / X</div>
+          <div class="popup-link-handle">@david_mdikula</div>
+        </div>
+        <span class="popup-link-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+function openPopup(){document.getElementById('popupOverlay').classList.add('open');}
+function closePopup(){document.getElementById('popupOverlay').classList.remove('open');}
+function closeOnOverlay(e){if(e.target===document.getElementById('popupOverlay'))closePopup();}
+</script>
